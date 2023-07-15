@@ -175,9 +175,14 @@ body {
   background-color: #151515;
 }
 
+.slider__notification{
+  cursor: pointer;
+}
+
 .notification-active {
   background-color: #fff;
   height: 6px;
+  transition: background-color 1s;
 }
 
 /* ================

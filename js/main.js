@@ -1,31 +1,50 @@
 const sliderNotification = document.querySelectorAll('.slider__notification');
 const sliderImage = document.querySelectorAll('.slider__slide');
-let currentSlide = 0;
+let positionSlide = 0;
+let interval;
 
-let nextSlide = () => {
-  sliderImage[currentSlide].className = 'slider__slide';
-  currentSlide = ++currentSlide % sliderImage.length;
-  sliderImage[currentSlide].className = 'slider__slide showing';
-  handleChangeNotification(sliderNotification[currentSlide]);
+const nextSlide = () => {
+  sliderImage[positionSlide].className = 'slider__slide';
+  positionSlide = ++positionSlide % sliderImage.length;
+  sliderImage[positionSlide].className = 'slider__slide showing';
+  handleChangeNotification(sliderNotification[positionSlide]);
+}
+
+const getCurrentSlide = () => {
+  sliderImage.forEach((item) => {
+    item.className = 'slider__slide';
+  })
+  sliderImage[positionSlide].className = 'slider__slide showing';
+
 }
 
 sliderNotification.forEach((item) => {
   item.addEventListener('click', () => {
-    handleChangeNotification(item);
+    handleClickNotification(item);
   });
 })
 
 handleChangeNotification = (item) => {
-  item.classList.toggle('notification-active');
-
   sliderNotification.forEach((elem) => {
-    elem.id !== item.id ? elem.className = 'slider__notification' : null;
+    elem.id !== item.id ? elem.className = 'slider__notification' : item.classList.toggle('notification-active');
   });
 }
 
+handleClickNotification = (item) => {
+  clearInterval(interval);
+  handleChangeNotification(item);
+  positionSlide = item.id - 1;
+  getCurrentSlide();
+  handleInterval();
+}
 
-setInterval(nextSlide, 4000);
+handleInterval = () => {
+  interval = setInterval(() => nextSlide(), 4000);
+}
 
+window.onload = () => {
+  handleInterval();
+}
 
 
 
