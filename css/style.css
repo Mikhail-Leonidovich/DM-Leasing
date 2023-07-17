@@ -134,6 +134,18 @@ body {
   height: 100%;
 }
 
+.slider__wrapper::after {
+  content: "";
+  position: absolute;
+  background-color: #151515;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+}
+
 .slider__slide {
   position: absolute;
   top: 0;
@@ -175,7 +187,7 @@ body {
   background-color: #151515;
 }
 
-.slider__notification{
+.slider__notification {
   cursor: pointer;
 }
 
@@ -186,12 +198,96 @@ body {
 }
 
 /* ================
-      Content 
+    ADVANTAGES
 =================*/
 
-.content__title {
-  height: 600px;
-  width: 100%;
+.advantages__title {
+  font-size: 48px;
+  font-weight: 700;
+  padding: 150px 0 50px;
+  text-align: center;
+}
+
+.advantages__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 270px;
+}
+
+.advantages__item-img {
+  width: 150px;
+  height: 150px;
+}
+
+.advantages__item-title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* ================
+    LEASING-WORK 
+=================*/
+
+.leasing-work {
+  width: 615px;
+  margin: 0 auto;
+}
+
+.leasing-work__title {
+  margin-top: 150px;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.leasing-work__text {
+  margin-top: 50px;
+}
+
+.leasing-work__subtitle {
+  margin-top: 50px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.leasing-work__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.leasing-work__list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 140px;
+}
+
+.leasing-work__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 48px;
+  font-weight: 700;
+  background-color: #0066ff;
+  color: #fff;
+}
+
+.leasing-work__list-text {
+  display: block;
+  width: 270px;
 }
 
 /* ================

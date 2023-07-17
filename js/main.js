@@ -3,6 +3,12 @@ const sliderImage = document.querySelectorAll('.slider__slide');
 let positionSlide = 0;
 let interval;
 
+sliderNotification.forEach((item) => {
+  item.addEventListener('click', () => {
+    handleClickNotification(item);
+  });
+})
+
 const nextSlide = () => {
   sliderImage[positionSlide].className = 'slider__slide';
   positionSlide = ++positionSlide % sliderImage.length;
@@ -15,22 +21,15 @@ const getCurrentSlide = () => {
     item.className = 'slider__slide';
   })
   sliderImage[positionSlide].className = 'slider__slide showing';
-
 }
 
-sliderNotification.forEach((item) => {
-  item.addEventListener('click', () => {
-    handleClickNotification(item);
-  });
-})
-
-handleChangeNotification = (item) => {
+const handleChangeNotification = (item) => {
   sliderNotification.forEach((elem) => {
-    elem.id !== item.id ? elem.className = 'slider__notification' : item.classList.toggle('notification-active');
+    elem.id === item.id ? item.classList.add('notification-active') : elem.className = 'slider__notification';
   });
 }
 
-handleClickNotification = (item) => {
+const handleClickNotification = (item) => {
   clearInterval(interval);
   handleChangeNotification(item);
   positionSlide = item.id - 1;
@@ -38,7 +37,7 @@ handleClickNotification = (item) => {
   handleInterval();
 }
 
-handleInterval = () => {
+const handleInterval = () => {
   interval = setInterval(() => nextSlide(), 4000);
 }
 
