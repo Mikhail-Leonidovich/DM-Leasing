@@ -1,3 +1,6 @@
+
+/* SLIDER */
+
 const sliderNotification = document.querySelectorAll('.slider__notification');
 const sliderImage = document.querySelectorAll('.slider__slide');
 let positionSlide = 0;
@@ -44,7 +47,6 @@ const handleInterval = () => {
 window.onload = () => {
   handleInterval();
 }
-
 
 
 

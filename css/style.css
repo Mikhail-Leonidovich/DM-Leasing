@@ -8,6 +8,7 @@
   font-size: 16px;
   line-height: 1.3;
   font-weight: 400px;
+  color: #151515;
 }
 
 h1,
@@ -112,6 +113,7 @@ body {
   margin: 250px 0 40px;
   font-size: 96px;
   font-weight: 700;
+  color: #fff;
 }
 
 .top__btn {
@@ -394,6 +396,7 @@ body {
   font-size: 24px;
   font-weight: 700;
   padding-bottom: 20px;
+  color: #fff;
 }
 
 .footer__menu-item + .footer__menu-item {
@@ -415,10 +418,254 @@ body {
 
 .footer__copy-text {
   font-size: 12px;
+  color: #fff;
 }
 
 .copy__nav-list {
   display: flex;
   justify-content: center;
   gap: 40px;
+}
+
+/* ==========
+  CONTACTS
+===========*/
+
+.contacts {
+  padding: 100px 0 150px;
+}
+
+.contacts-title {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.contacts-subtitle {
+  margin-top: 20px;
+  padding: 0 50px;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.contacts-form {
+  margin: 50px auto 0;
+  max-width: 580px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contacts-form__input {
+  display: inline-block;
+  width: 270px;
+  height: 60px;
+  padding: 18px 20px;
+  outline: none;
+  border: 1px #0066ff solid;
+}
+
+.contacts-form__textarea {
+  margin-top: 50px;
+  width: 100%;
+  height: 290px;
+  padding: 28px 20px;
+  outline: none;
+  border: 1px #0066ff solid;
+  resize: none;
+}
+
+.contacts-form__input:focus,
+.contacts-form__textarea:focus {
+  border-color: #151515;
+}
+
+.contacts-form__input::placeholder,
+.contacts-form__textarea::placeholder {
+  color: #151515;
+  opacity: 0.5;
+}
+
+.contacts-form__btn {
+  display: block;
+  margin: 50px auto 0;
+  padding: 13px 30px;
+  min-height: 35px;
+  background-color: #151515;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.3s;
+  border: none;
+}
+
+.contacts-form__btn:hover {
+  background-color: #0066ff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* ==========
+    BLOG
+===========*/
+
+.blog {
+  padding-bottom: 160px;
+  text-align: center;
+}
+
+.blog-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.blog-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.blog-img {
+  margin-bottom: 30px;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.blog-title {
+  font-size: 24px;
+  font-weight: 700;
+  flex-basis: 460px;
+}
+
+.blog-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0066ff;
+  width: 80px;
+  height: 25px;
+}
+
+.blog-btn {
+  display: inline-block;
+  margin: 70px auto 0;
+  padding: 13px 30px;
+  min-height: 35px;
+  background-color: #151515;
+  color: #fff;
+  text-transform: uppercase;
+  transition: 0.3s;
+  border: none;
+}
+
+.blog-btn:hover {
+  background-color: #0066ff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* ==========
+    CHOOSE
+===========*/
+
+.choose {
+  padding: 100px 0 150px;
+  text-align: center;
+}
+
+.choose-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.tabs-buttons {
+  margin: 50px 0 100px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.tabs-btn {
+  border: none;
+  background-color: #fff;
+  color: #151515;
+  font-size: 24px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.tabs-btn--active {
+  color: #0066ff;
+}
+
+.tabs-btn:hover {
+  cursor: pointer;
+  color: #0066ff;
+  transition: 0.3s;
+}
+
+.cards-item {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 100px 40px;
+}
+
+.cards-item--hide {
+  display: none;
+}
+
+.card {
+  width: 270px;
+  text-align: center;
+}
+
+.card-img {
+  display: block;
+}
+
+.card-inner {
+  border: 1px solid #0066ff;
+  border-top: 0;
+}
+
+.card-title {
+  padding-top: 20px;
+  font-size: 24px;
+}
+
+.card-text {
+  margin: 20px 0;
+}
+
+.card-price {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.card-link {
+  display: block;
+  color: #0066ff;
+  border: 1px solid #0066ff;
+  border-top: 0;
+}
+
+.choose-btn {
+  margin: 70px auto 0;
+  padding: 13px 30px;
+  min-height: 35px;
+  display: inline-block;
+  background-color: #151515;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.choose-btn:hover {
+  background-color: #0066ff;
+  transition: 0.3s;
 }
