@@ -249,7 +249,7 @@ body {
 
 .leasing-work {
   padding-top: 150px;
-  width: 615px;
+  max-width: 615px;
   margin: 0 auto;
 }
 
@@ -623,6 +623,7 @@ body {
 
 .card-img {
   display: block;
+  width: 100%;
 }
 
 .card-inner {
@@ -812,16 +813,36 @@ body {
   .footer__menu-title {
     font-size: 22px;
   }
+
+  .choose-title {
+    font-size: 45px;
+  }
+
+  .tabs-btn {
+    font-size: 22px;
+    gap: 40px;
+  }
+
+  .card-title {
+    font-size: 22px;
+  }
+
+  .contacts-title {
+    font-size: 35px;
+  }
+
+  .contacts-subtitle {
+    font-size: 22px;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 915px) {
   .burger-menu {
     display: block;
   }
 
   .header-menu__list {
     display: none;
-    /*  */
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -848,6 +869,110 @@ body {
 
   .header-menu__link {
     font-size: 32px;
+  }
+
+  .slider__notification {
+    width: 60px;
+  }
+
+  .advantages__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .advantages__item-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .tabs-buttons {
+    flex-wrap: wrap;
+    gap: 40px;
+    column-gap: 20px;
+  }
+}
+
+@media (max-width: 615px) {
+  .leasing-work__list-item {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .welcome-video {
+    height: 300px;
+  }
+
+  .footer__menu {
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .footer__menu-list {
+    width: 40%;
+  }
+
+  .apps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contacts-form {
+    gap: 30px;
+  }
+
+  .contacts-form__input {
+    width: 100%;
+  }
+
+  .contacts-form__textarea {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .leasing-work__text {
+    text-align: center;
+  }
+
+  .slider__pagination {
+    gap: 20px;
+  }
+
+  .slider__notification {
+    width: 50px;
+  }
+}
+
+@media (max-height: 700px) {
+  .top__title {
+    margin-top: 200px;
+  }
+
+  .slider__pagination {
+    bottom: 50px;
+  }
+}
+
+@media (max-height: 620px) {
+  .top__title {
+    margin-top: 150px;
+  }
+
+  .header-menu__list {
+    gap: 30px;
+  }
+
+  .header-menu__link {
+    font-size: 24px;
+  }
+}
+
+@media (max-height: 500px) {
+  .slider__pagination {
+    display: none;
   }
 }
 
